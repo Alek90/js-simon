@@ -12,19 +12,12 @@ function generateNumber (limit) {
     return Math.floor(Math.random() * limit)
 }
 
-/* function question () {
-    number = prompt ("Which number do you remember?")
-    console.log(number);
-
-    return number
+function numberRegister() {
+    while (userNumbers.length < 5) {
+        let number = Number(prompt ("Which number do you remember?"));
+        userNumbers.push(number);
+    }
 }
-*/
-
-
-
-/* function rememberedNumber () {
-
-} */
 
 
 
@@ -33,11 +26,14 @@ function generateNumber (limit) {
 let casualNumbers = [];
 
 // Finchè casualNumber non conterrà 5 numeri, generiamo ed inseriamo numeri random:
+
 while (casualNumbers.length < 5) {
     const randomNumber = generateNumber(100);
     casualNumbers.push(randomNumber);
 }
 console.log(casualNumbers);
+
+
 
 // alert:
 
@@ -62,11 +58,7 @@ alert (casualNumbers);
 console.log(userNumbers); */
 
 
-setTimeout(function() {
-    while (userNumbers.length < 5) {
-        let number = Number(prompt ("Which number do you remember?"));
-        userNumbers.push(number);
-    }
-    console.log(userNumbers);
-    
-}, 3000)
+setTimeout(numberRegister(), 3000)
+        
+        
+console.log(userNumbers)
