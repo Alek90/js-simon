@@ -4,23 +4,33 @@
     Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 */
 
-
+let userNumbers = []
+let number = "";
 
 // Funzioni:
 function generateNumber (limit) {
     return Math.floor(Math.random() * limit)
 }
 
-function question () {
-    prompt ("Do you remember the numbers?")
+/* function question () {
+    number = prompt ("Which number do you remember?")
+    console.log(number);
+
+    return number
 }
+*/
+
+
+
+/* function rememberedNumber () {
+
+} */
 
 
 
 // Craeiamo un array di 5 numeri random:
 
 let casualNumbers = [];
-let number = "";
 
 // Finchè casualNumber non conterrà 5 numeri, generiamo ed inseriamo numeri random:
 while (casualNumbers.length < 5) {
@@ -35,5 +45,19 @@ alert (casualNumbers);
 
 
 // Timer e prompt:
-setTimeout(question, 30000)
+
+/*  Passati 30s, appare un prompt che chiede un num ricordato.
+    Il numero deve essere conservato in un array, dopodichè l'operazione si ripeterà fino ad aver inserito 5 numeri.
+*/
+
+
+//setTimeout(question, 3000)
+
+// Creare un array per i numeri che segna l'utente:
+while (userNumbers.length < 5) {
+    let number = Number(prompt ("Which number do you remember?"));
+    userNumbers.push(number);
+}
+
+console.log(userNumbers);
 
