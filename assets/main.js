@@ -20,9 +20,10 @@ let number = "";
 
 // Finchè casualNumber non conterrà 5 numeri, generiamo ed inseriamo numeri random:
 while (casualNumbers.length < 5) {
-    const randomNumber = generateNumber(100)
-    casualNumbers.push(randomNumber)
+    const randomNumber = generateNumber(100);
+    casualNumbers.push(randomNumber);
 }
 console.log(casualNumbers);
 
 // alert:
+alert (casualNumbers)
