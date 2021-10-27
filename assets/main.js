@@ -4,23 +4,29 @@
     Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 */
 
-let userNumbers = []
+
+// Variabili inizializzate per array:
+let casualNumbers = [];
+let userNumbers = [];
+let rememberedNumbers = [];
+
+// Variabili inizializzate:
 let number = "";
-let rememberedNumbers = []
 let totalRememberedNumbers = "";
+
+
+// Oggetti utili dalla dom:
 
 const correctNumber = document.querySelector(".number");
 const result = document.querySelector(".result");
 
-// Funzioni:
+
+// Funzioni richiamabili:
+
 function generateNumber (limit) {
     return Math.floor(Math.random() * limit)
 }
 
-
-// Craeiamo un array di 5 numeri random:
-
-let casualNumbers = [];
 
 // Finchè casualNumber non conterrà 5 numeri, generiamo ed inseriamo numeri random:
 
@@ -28,8 +34,6 @@ while (casualNumbers.length < 5) {
     const randomNumber = generateNumber(100);
     casualNumbers.push(randomNumber);
 }
-console.log(casualNumbers);
-
 
 
 // alert:
@@ -44,7 +48,6 @@ alert (casualNumbers);
     Tutti i numeri vengono conservati in un secondo array, dopodichè l'operazione si ripeterà fino ad aver inserito 5 numeri.
 */
 
-
 setTimeout(function numberRegister() {
 
     while (userNumbers.length < 5) {
@@ -58,22 +61,12 @@ setTimeout(function numberRegister() {
         userNumbers.push(number);
         
         totalRememberedNumbers = rememberedNumbers.length
-        console.log(totalRememberedNumbers);
 
         // viene mandato a schermo il numero di numeri corretti, e viene indicato quali siano:
-        result.innerHTML = rememberedNumbers.length
-        correctNumber.innerHTML = rememberedNumbers
+        result.innerHTML = "Hai ricordato " + rememberedNumbers.length + " numeri!";
+        correctNumber.innerHTML = "Questi sono i numeri che hai ricordato: " + rememberedNumbers;
 
     }
     
 }, 3000)
         
-
-
-
-
-
-
-
-
-
