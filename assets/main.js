@@ -6,7 +6,11 @@
 
 let userNumbers = []
 let number = "";
-let rememberedNumber = []
+let rememberedNumbers = []
+let totalRememberedNumbers = "";
+
+const correctNumber = document.querySelector(".number");
+const result = document.querySelector(".result");
 
 // Funzioni:
 function generateNumber (limit) {
@@ -48,18 +52,26 @@ setTimeout(function numberRegister() {
         let number = Number(prompt ("Which number do you remember?"));
 
         if (casualNumbers.includes(number)) {
-            rememberedNumber.push(number)
+            rememberedNumbers.push(number)
         }
-
+        
         userNumbers.push(number);
+        
+        totalRememberedNumbers = rememberedNumbers.length
+        console.log(totalRememberedNumbers);
+
+        // viene mandato a schermo il numero di numeri corretti, e viene indicato quali siano:
+        result.innerHTML = rememberedNumbers.length
+        correctNumber.innerHTML = rememberedNumbers
+
     }
     
 }, 3000)
         
-        
-console.log(userNumbers, rememberedNumber)
 
-// rememberedNumber va a schermo, con un messaggio che dice da quanti elementi è costituito:
+
+
+
 
 
 
