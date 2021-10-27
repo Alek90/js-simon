@@ -11,6 +11,10 @@ function generateNumber (limit) {
     return Math.floor(Math.random() * limit)
 }
 
+function question () {
+    prompt ("Do you remember the numbers?")
+}
+
 
 
 // Craeiamo un array di 5 numeri random:
@@ -26,4 +30,10 @@ while (casualNumbers.length < 5) {
 console.log(casualNumbers);
 
 // alert:
-alert (casualNumbers)
+
+alert (casualNumbers);
+
+
+// Timer e prompt:
+setTimeout(question, 30000)
+
