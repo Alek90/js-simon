@@ -51,7 +51,7 @@ setTimeout(function numberRegister() {
 
         let number = Number(prompt ("Which number do you remember?"));
 
-        if (casualNumbers.includes(number)) {
+        if (casualNumbers.includes(number) && !rememberedNumbers.includes(number)) {
             rememberedNumbers.push(number)
         }
         
