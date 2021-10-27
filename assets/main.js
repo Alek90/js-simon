@@ -54,10 +54,19 @@ alert (casualNumbers);
 //setTimeout(question, 3000)
 
 // Creare un array per i numeri che segna l'utente:
-while (userNumbers.length < 5) {
+/* while (userNumbers.length < 5) {
     let number = Number(prompt ("Which number do you remember?"));
     userNumbers.push(number);
 }
 
-console.log(userNumbers);
+console.log(userNumbers); */
 
+
+setTimeout(function() {
+    while (userNumbers.length < 5) {
+        let number = Number(prompt ("Which number do you remember?"));
+        userNumbers.push(number);
+    }
+    console.log(userNumbers);
+    
+}, 3000)
