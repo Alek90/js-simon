@@ -6,19 +6,12 @@
 
 let userNumbers = []
 let number = "";
+let rememberedNumber = []
 
 // Funzioni:
 function generateNumber (limit) {
     return Math.floor(Math.random() * limit)
 }
-
-/* function numberRegister() {
-    while (userNumbers.length < 5) {
-        let number = Number(prompt ("Which number do you remember?"));
-        userNumbers.push(number);
-    }
-} */
-
 
 
 // Craeiamo un array di 5 numeri random:
@@ -43,30 +36,32 @@ alert (casualNumbers);
 // Timer e prompt:
 
 /*  Passati 30s, appare un prompt che chiede un num ricordato.
-    Il numero deve essere conservato in un array, dopodichè l'operazione si ripeterà fino ad aver inserito 5 numeri.
+    I numeri corretti vengono salvati in un array.
+    Tutti i numeri vengono conservati in un secondo array, dopodichè l'operazione si ripeterà fino ad aver inserito 5 numeri.
 */
 
 
-//setTimeout(question, 3000)
-
-// Creare un array per i numeri che segna l'utente:
-/* while (userNumbers.length < 5) {
-    let number = Number(prompt ("Which number do you remember?"));
-    userNumbers.push(number);
-}
-
-console.log(userNumbers); */
-
-
 setTimeout(function numberRegister() {
+
     while (userNumbers.length < 5) {
+
         let number = Number(prompt ("Which number do you remember?"));
+
+        if (casualNumbers.includes(number)) {
+            rememberedNumber.push(number)
+        }
+
         userNumbers.push(number);
     }
     
 }, 3000)
         
         
-console.log(userNumbers)
+console.log(userNumbers, rememberedNumber)
+
+// rememberedNumber va a schermo, con un messaggio che dice da quanti elementi è costituito:
+
+
+
 
 
