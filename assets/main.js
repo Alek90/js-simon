@@ -68,5 +68,5 @@ setTimeout(function numberRegister() {
 
     }
     
-}, 3000)
+}, 30000)
         
