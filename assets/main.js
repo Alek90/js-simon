@@ -7,4 +7,22 @@
 
 
 // Funzioni:
-// -genera numeri random:
+function generateNumber (limit) {
+    return Math.floor(Math.random() * limit)
+}
+
+
+
+// Craeiamo un array di 5 numeri random:
+
+let casualNumbers = [];
+let number = "";
+
+// Finchè casualNumber non conterrà 5 numeri, generiamo ed inseriamo numeri random:
+while (casualNumbers.length < 5) {
+    const randomNumber = generateNumber(100)
+    casualNumbers.push(randomNumber)
+}
+console.log(casualNumbers);
+
+// alert:
