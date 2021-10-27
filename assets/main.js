@@ -12,12 +12,12 @@ function generateNumber (limit) {
     return Math.floor(Math.random() * limit)
 }
 
-function numberRegister() {
+/* function numberRegister() {
     while (userNumbers.length < 5) {
         let number = Number(prompt ("Which number do you remember?"));
         userNumbers.push(number);
     }
-}
+} */
 
 
 
@@ -58,7 +58,15 @@ alert (casualNumbers);
 console.log(userNumbers); */
 
 
-setTimeout(numberRegister(), 3000)
+setTimeout(function numberRegister() {
+    while (userNumbers.length < 5) {
+        let number = Number(prompt ("Which number do you remember?"));
+        userNumbers.push(number);
+    }
+    
+}, 3000)
         
         
 console.log(userNumbers)
+
+
